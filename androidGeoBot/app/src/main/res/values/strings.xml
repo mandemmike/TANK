@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">AndroidTank</string>
+    <string name="app_title">Tank</string>
+    <string name="joystick">Joystick</string>
+    <string name="mountain_image">mountain_image</string>
+    <string name="back">back</string>
+    <string name="tutorial">TUTORIAL</string>
+    <string name="broker">BROKER</string>
+    <string name="autopilot">Autopilot</string>
+    <string name="help">help</string>
+    <string name="cameraview">cameraView</string>
+    <string name="brake">Brake</string>
+    <string name="score">Score: </string>
+    <string name="win">You won!</string>
+    <string name="lose">Game over!</string>
+
+    <string name="finish">Finish</string>
+    <string name="playAgain">Play again!</string>
+    <string name="confetti">🎉</string>
+    <string name="sad_emoji">😨</string>
+
+    <string name="rules"><font fgcolor="white">Rules</font></string>
+    <string name="play">Play</string>
+    <string name="timer">Time left:</string>
+    <string name="toast_text">CONNECTION TO TANK ESTABLISHED</string>
+
+</resources>

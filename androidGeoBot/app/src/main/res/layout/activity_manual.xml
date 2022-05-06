@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0E1428"
+    tools:context=".ManualActivity"
+    android:id="@+id/ManualActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_back"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="50"
+        android:orientation="horizontal">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <io.github.controlwear.virtual.joystick.android.JoystickView
+                android:id="@+id/joystickView"
+                android:layout_width="300dp"
+                android:layout_height="275dp"
+                app:JV_backgroundColor="#FFFFFF"
+                app:JV_buttonColor="#E0583A"
+                app:JV_buttonSizeRatio="25%"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.448"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.596" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/break_button"
+                android:layout_width="185dp"
+                android:layout_height="62dp"
+                android:background="@drawable/bg_brake_button"
+                android:text="@string/brake"
+                android:fontFamily="@font/bree_serif"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.865" />
+
+            <ImageView
+                android:id="@+id/cameraView"
+                android:layout_width="403dp"
+                android:layout_height="249dp"
+                android:layout_weight="0.3"
+                android:contentDescription="@string/cameraview"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/joystickView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/speedSlider"
+                android:layout_width="386dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="283dp"
+                android:layout_marginBottom="487dp"
+                android:stepSize="1"
+                android:valueFrom="0"
+                android:valueTo="100"
+                app:haloColor="#E0583A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.68"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.264"
+                app:thumbColor="#E0583A"
+                app:thumbRadius="14dp"
+                app:trackColorActive="#E0583A"
+                app:trackColorInactive="#FFFFFF"
+                app:trackHeight="13dp" />
+
+            <TextView
+                android:id="@+id/scoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bree_serif"
+                android:text="Score: 0"
+                android:textColor="#FFFCFC"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.751" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="25dp"
+                android:fontFamily="@font/bree_serif"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/timer"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:text="@string/timer"
+                    android:textColor="#F44336"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="113dp"
+                    tools:layout_editor_absoluteY="659dp" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:text=""
+                    android:textColor="#F44336"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="206dp"
+                    tools:layout_editor_absoluteY="671dp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
